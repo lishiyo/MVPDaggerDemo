@@ -1,4 +1,4 @@
-package com.androidheroes.tutsplusdagger.model;
+package com.cziyeli.daggerbasic.model;
 
 /**
  * Created by kerry on 14/02/15.

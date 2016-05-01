@@ -1,7 +1,7 @@
-package com.androidheroes.tutsplusdagger.component;
+package com.cziyeli.daggerbasic.component;
 
-import com.androidheroes.tutsplusdagger.model.Vehicle;
-import com.androidheroes.tutsplusdagger.module.VehicleModule;
+import com.cziyeli.daggerbasic.model.Vehicle;
+import com.cziyeli.daggerbasic.module.VehicleModule;
 
 import javax.inject.Singleton;
 

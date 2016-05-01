@@ -1,15 +1,13 @@
-package com.androidheroes.tutsplusdagger;
+package com.cziyeli.daggerbasic;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.androidheroes.tutsplusdagger.component.Dagger_VehicleComponent;
-import com.androidheroes.tutsplusdagger.component.VehicleComponent;
-import com.androidheroes.tutsplusdagger.model.Vehicle;
-import com.androidheroes.tutsplusdagger.module.VehicleModule;
+import com.cziyeli.daggerbasic.component.DaggerVehicleComponent;
+import com.cziyeli.daggerbasic.component.VehicleComponent;
+import com.cziyeli.daggerbasic.model.Vehicle;
+import com.cziyeli.daggerbasic.module.VehicleModule;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -24,7 +22,7 @@ public class MainActivity extends ActionBarActivity {
 
         speedValue = (TextView) findViewById(R.id.current_speed_value);
 
-        VehicleComponent component = Dagger_VehicleComponent.builder().vehicleModule(new VehicleModule()).build();
+        VehicleComponent component = DaggerVehicleComponent.builder().vehicleModule(new VehicleModule()).build();
 
         vehicle = component.provideVehicle();
 

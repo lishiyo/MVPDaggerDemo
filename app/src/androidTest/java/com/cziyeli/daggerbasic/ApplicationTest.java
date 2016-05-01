@@ -1,4 +1,4 @@
-package com.androidheroes.tutsplusdagger;
+package com.cziyeli.daggerbasic;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

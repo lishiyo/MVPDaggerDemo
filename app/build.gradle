@@ -6,7 +6,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "com.androidheroes.tutsplusdagger"
+        applicationId "com.cziyeli.mvpdaggerdemo"
         minSdkVersion 10
         targetSdkVersion 21
         versionCode 1
@@ -24,7 +24,10 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
 
-    compile 'com.google.dagger:dagger:2.0-SNAPSHOT'
-    apt 'com.google.dagger:dagger-compiler:2.0-SNAPSHOT'
-    provided 'org.glassfish:javax.annotation:10.0-b28'
+    // apt command comes from the android-apt plugin
+    // does not add these classes to class path, means classes used only for annotations
+    apt 'com.google.dagger:dagger-compiler:2.2'
+    compile 'com.google.dagger:dagger:2.2'
+    // provided refers to dependencies only needed at compilation
+    provided 'javax.annotation:jsr250-api:1.0'
 }

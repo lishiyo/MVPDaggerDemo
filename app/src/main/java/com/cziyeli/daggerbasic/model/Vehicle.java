@@ -1,4 +1,4 @@
-package com.androidheroes.tutsplusdagger.model;
+package com.cziyeli.daggerbasic.model;
 
 import javax.inject.Inject;
 
