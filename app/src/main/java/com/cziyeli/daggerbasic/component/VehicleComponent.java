@@ -1,23 +1,20 @@
 package com.cziyeli.daggerbasic.component;
 
-import com.cziyeli.daggerbasic.model.Vehicle;
+import com.cziyeli.daggerbasic.ui.MainActivity;
+import com.cziyeli.daggerbasic.module.AppModule;
 import com.cziyeli.daggerbasic.module.VehicleModule;
+import dagger.Component;
 
 import javax.inject.Singleton;
 
-import dagger.Component;
-
 /**
- * Created by kerry on 14/02/15.
+ * Component hooks references in activities, services, or fragments to the module singletons.
  */
 
 @Singleton
-
-//Step 1
-@Component(modules = {VehicleModule.class})
+@Component(modules = {AppModule.class, VehicleModule.class})
 public interface VehicleComponent {
 
-    //Step 2
-    Vehicle provideVehicle();
-
+    // activities, fragments that are interested in VehicleModule
+    void inject(MainActivity activity);
 }
